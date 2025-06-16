@@ -313,7 +313,7 @@ body {
     }
 }
 
-/* ===== CONTENIDO DEMO (TEMPORAL) ===== */
+/* ===== CONTENIDO ===== */
 .new-section {
     padding: 4rem 0;
     text-align: center;
@@ -379,10 +379,9 @@ footer {
     padding: 5px;
     text-align: center;
     border-top: 2px solid #6e2727;
-    position: fixed;
     bottom: 0;
     width: 100%;
-    position: fixed;
+    
 }
 
 /* estilo en seccion nosotros */
@@ -510,3 +509,46 @@ textarea:focus {
   display: block;
   margin-top: 2rem;
   border-radius: 8px; /* opcional */
+  }
+
+  /* seccion jugadores */
+
+  .seccion-jugadores {
+  padding: 2rem;
+  background-color: #f8f9fa;
+}
+
+.descripcion {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.descripcion-texto {
+  max-width: 600px;
+}
+
+.partido-card {
+  border: 1px solid #dee2e6;
+  border-radius: 10px;
+  padding: 1rem;
+  background-color: #ffffff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.partido-card h5 {
+  font-weight: 600;
+}
+
+.mapa-container iframe {
+  border-radius: 8px;
+  margin-top: 0.5rem;
+}
+
+
+.img-phila {
+  width: 30vw;
+  height: auto;
+  border-radius: 10px;
+}
