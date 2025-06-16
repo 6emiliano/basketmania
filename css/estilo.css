@@ -384,3 +384,58 @@ footer {
     width: 100%;
     position: fixed;
 }
+
+/* estilo en seccion nosotros */
+.sobre-nosotros {
+  padding: 2rem;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.intro {
+  max-width: 800px;
+  margin: 0 auto 2rem;
+}
+
+.grid-cuadrantes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.cuadrante {
+  width: 100%;
+  overflow: hidden;
+  border: 2px solid #ccc;         /* Borde gris claro */
+  border-radius: 12px;            /* Bordes redondeados */
+  padding: 8px;                   /* Espacio interno opcional */
+  background-color: #fff;         /* Fondo blanco para contraste */
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1); /* Sombra suave */
+}
+
+.media {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
+}
+
+.titulo-con-imagen {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  justify-content: center; /* centrado opcional */
+}
+
+.titulo-con-imagen h2 {
+  font-size: 2rem; /* tamaño base */
+  line-height: 1.2;
+  margin: 0;
+}
+
+.img-sobre-nosotros {
+  height: calc(2 * 2rem * 1.2); /* 2x la altura visual del h2 */
+  width: auto;
+}
