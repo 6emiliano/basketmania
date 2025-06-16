@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="../css/estilo.css">
 </head>
 <body>
-    <!-- ===== NAVBAR PRINCIPAL (SOLO CSS - SIN JAVASCRIPT) ===== -->
+    <!-- ===== NAVBAR PRINCIPAL ===== -->
     <nav class="navbar-container">
         <div class="nav-content">
             <!-- Logo -->
@@ -80,14 +80,55 @@
     
     <main>
         <!-- Sección  -->
-        <section class="new-section">
-            <div class="container">
-                <div class="new-content">
-                    <h1><i class="fas fa-basketball-ball me-2"></i>BasketMania</h1>
-                    <p class="lead">El lugar para los fanaticos del basket</p>
-                    <p>Un proyecto creado entre amigos para conectar jugadores y canchas, fomantando la comnunidad mas linda del deporte.</p>
-                </div>
+        <section class="comunidad">
+            <h2>Unite a la Comunidad</h2>
+         <form class="formulario">
+    
+            <div class="form-group">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required />
             </div>
+
+            <div class="form-group">
+                <label for="edad">Edad:</label>
+                <input type="number" id="edad" name="edad" min="0" required />
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required />
+            </div>
+
+            <div class="form-group">
+                <label for="posicion">Posición:</label>
+                <select id="posicion" name="posicion" required>
+                <option value="">Seleccioná una opción</option>
+                <option value="base">Base</option>
+                <option value="alero">Alero</option>
+                <option value="pivot">Pívot</option>
+                </select>
+            </div>
+
+            <fieldset class="form-group">
+                <legend>Sexo:</legend>
+                <label><input type="radio" name="sexo" value="masculino" required /> Masculino</label>
+                <label><input type="radio" name="sexo" value="femenino" required /> Femenino</label>
+            </fieldset>
+
+            <fieldset class="form-group">
+                <legend>Días disponibles:</legend>
+                <label><input type="checkbox" name="dias" value="lunes" /> Lun</label>
+                <label><input type="checkbox" name="dias" value="martes" /> Mar</label>
+                <label><input type="checkbox" name="dias" value="miércoles" /> Miér</label>
+                <label><input type="checkbox" name="dias" value="jueves" /> Jue</label>
+                <label><input type="checkbox" name="dias" value="viernes" /> Vier</label>
+                </fieldset>
+
+            <button type="submit">Unirme a la comunidad</button>
+        </form>
+
+        <img src="https://cdn.nba.com/teams/uploads/sites/1610612755/2025/01/City-Edition-_-SixersShop-Web-Graphics-2000x279-1.jpg?im=Resize=(1920)" alt="publicidadPhila" class="imagen-final";" />
+
         </section>
     </main>
 

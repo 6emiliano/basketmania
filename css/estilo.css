@@ -318,7 +318,7 @@ body {
     padding: 4rem 0;
     text-align: center;
     color: #666;
-    background-image: url('https://sdmntprwestus.oaiusercontent.com/files/00000000-0760-6230-90c3-7aaaadc3b3ea/raw?se=2025-06-16T01%3A50%3A44Z&sp=r&sv=2024-08-04&sr=b&scid=1e84ef10-95a2-5356-a726-28f3d8e06bd4&skoid=ea1de0bc-0467-43d6-873a-9a5cf0a9f835&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-06-15T10%3A45%3A49Z&ske=2025-06-16T10%3A45%3A49Z&sks=b&skv=2024-08-04&sig=SdP%2BEaMby5%2B/QK4f1qZo6FMGEdXZ78qyJ1V7Y3qq%2BLs%3D'); 
+    background-image: url('../img/fondo.png'); 
     /* background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); */
     min-height: 70vh;
     display: flex;
@@ -439,3 +439,74 @@ footer {
   height: calc(2 * 2rem * 1.2); /* 2x la altura visual del h2 */
   width: auto;
 }
+
+/* para la comunidad */
+.comunidad {
+  padding: 2rem;
+  background-color: #f0f4ff;
+  text-align: center;
+}
+
+.formulario {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  max-width: 800px;
+  margin: 0 auto;
+  justify-content: space-between;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 45%;
+  min-width: 250px;
+}
+
+.form-group input,
+.form-group select {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+fieldset.form-group {
+  border: none;
+  flex: 1 1 100%;
+  text-align: left;
+}
+
+fieldset.form-group label {
+  margin-right: 1rem;
+}
+
+button {
+  margin-top: 1rem;
+  padding: 0.75rem 1.5rem;
+  background-color: #cc0000;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #990a00;
+}
+
+
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: #0066cc;
+  box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.2);
+  background-color: #eaf4ff;
+}
+.imagen-final {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-top: 2rem;
+  border-radius: 8px; /* opcional */
