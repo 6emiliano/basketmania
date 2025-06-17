@@ -1,121 +1,133 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cancha - Basketmania</title>
-    
+
     <!-- Bootstrap CSS -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
-    
+
     <!-- Font Awesome para iconos -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-    
+
     <!-- CSS personalizado -->
     <link rel="stylesheet" href="../css/estilo.css">
     <!-- scrip -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </head>
+
 <body>
-    <!-- ===== NAVBAR PRINCIPAL ===== -->
-    <nav class="navbar-container">
-        <div class="nav-content">
-            <!-- Logo -->
-            <a href="../index.html" class="logo-link">
-                <div class="logo-container">
-                    <!-- SVG del logo de básquet con alas -->
-                     
-                  <img src="../img/logo.png" alt="Logo Basketball" class="logo-container">
-                </div>
-            </a>
+    <header>
+        <!-- ===== NAVBAR PRINCIPAL ===== -->
+        <nav class="navbar-container">
+            <div class="nav-content">
+                <!-- Logo -->
+                <a href="../index.html" class="logo-link">
+                    <div class="logo-container">
+                        <!-- SVG del logo de básquet con alas -->
 
-            <!-- Checkbox oculto para controlar el menú mobile -->
-            <input type="checkbox" id="menu-toggle" class="menu-toggle">
-            
-            <!-- Botón hamburguesa (label que controla el checkbox) -->
-            <label for="menu-toggle" class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </label>
+                        <img src="../img/logo.png" alt="Logo Basketball" class="logo-container">
+                    </div>
+                </a>
 
-            <!-- Menu de navegación -->
-            <ul class="nav-menu">
-                <!-- Link a Index/Inicio -->
-                <li class="nav-item">
-                    <a class="nav-link" href="../index.html">
-                        <i class="fas fa-home"></i>Inicio
-                    </a>
-                </li>
-                
-                <!-- Link a Canchas -->
-                <li class="nav-item">
-                    <a class="nav-link active" href="cancha.html">
-                        <i class="fas fa-map-marker-alt"></i>Canchas
-                    </a>
-                </li>
-                
-                <!-- Link a Jugadores -->
-                <li class="nav-item">
-                    <a class="nav-link" href="jugador.html">
-                        <i class="fas fa-users"></i>Jugadores
-                    </a>
-                </li>
-                
-                <!-- Link a Comunidad -->
-                <li class="nav-item">
-                    <a class="nav-link" href="comunidad.html">
-                        <i class="fas fa-comments"></i>Comunidad
-                    </a>
-                </li>
-                
-                <!-- Link a Sobre Nosotros -->
-                <li class="nav-item">
-                    <a class="nav-link" href="nosotros.html">
-                        <i class="fas fa-info-circle"></i>Sobre Nosotros
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </nav>
+                <!-- Checkbox oculto para controlar el menú mobile -->
+                <input type="checkbox" id="menu-toggle" class="menu-toggle">
 
+                <!-- Botón hamburguesa (label que controla el checkbox) -->
+                <label for="menu-toggle" class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+
+                <!-- Menu de navegación -->
+                <ul class="nav-menu">
+                    <!-- Link a Index/Inicio -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">
+                            <i class="fas fa-home"></i>Inicio
+                        </a>
+                    </li>
+
+                    <!-- Link a Canchas -->
+                    <li class="nav-item">
+                        <a class="nav-link active" href="cancha.html">
+                            <i class="fas fa-map-marker-alt"></i>Canchas
+                        </a>
+                    </li>
+
+                    <!-- Link a Jugadores -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="jugador.html">
+                            <i class="fas fa-users"></i>Jugadores
+                        </a>
+                    </li>
+
+                    <!-- Link a Comunidad -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="comunidad.html">
+                            <i class="fas fa-comments"></i>Comunidad
+                        </a>
+                    </li>
+
+                    <!-- Link a Sobre Nosotros -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="nosotros.html">
+                            <i class="fas fa-info-circle"></i>Sobre Nosotros
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
     <!-- ===== CONTENIDO PRINCIPAL ===== -->
-    
+
     <main>
         <!-- Sección -->
 
-          <div class="seccion-jugadores container">
+        <div class="seccion-jugadores container">
             <h2 class="mb-4">Reserva tu cancha!</h2>
 
             <!-- Descripción y imagen -->
             <div class="descripcion mb-5">
                 <div class="descripcion-texto">
-                    <p>¿No sabes donde jugar? Este espacio te permite ver canchas con vacantes disponibles y reservar fácilmente.</p>
+                    <p>¿No sabes donde jugar? Este espacio te permite ver canchas con vacantes disponibles y reservar
+                        fácilmente.</p>
                 </div>
                 <div>
                     <!-- Carrusel de Bootstrap con 3 imágenes -->
                     <div id="carouselExampleIndicators" class="carousel slide img-phila" data-bs-ride="carousel">
                         <div class="carousel-indicators">
-                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                                class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                                aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                                aria-label="Slide 3"></button>
                         </div>
                         <div class="carousel-inner">
                             <div class="carousel-item active">
-                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTX-5CvAOEyNQ11OTnCPT7h-xuu89DzFK80zN2CckHz7lo-EWR1LKb-Ogr3hl-c6NkYT5c&usqp=CAU" class="d-block w-100" alt="Cancha 1">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTX-5CvAOEyNQ11OTnCPT7h-xuu89DzFK80zN2CckHz7lo-EWR1LKb-Ogr3hl-c6NkYT5c&usqp=CAU"
+                                    class="d-block w-100" alt="Cancha 1">
                             </div>
                             <div class="carousel-item">
-                                <img src="https://www.marketingregistrado.com/fotos/externas/impresionante-estadio-construira-philadelphia-76ers-1737037637-1.webp" class="d-block w-100" alt="Cancha 2">
+                                <img src="https://www.marketingregistrado.com/fotos/externas/impresionante-estadio-construira-philadelphia-76ers-1737037637-1.webp"
+                                    class="d-block w-100" alt="Cancha 2">
                             </div>
                             <div class="carousel-item">
-                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_S6bGl7Brkga8I4z-l-TKpzkRfEZFIDcp7gFbBFr6bzApzSqps0y964l37jAmA6MPBUk&usqp=CAU" class="d-block w-100" alt="Cancha 3">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_S6bGl7Brkga8I4z-l-TKpzkRfEZFIDcp7gFbBFr6bzApzSqps0y964l37jAmA6MPBUk&usqp=CAU"
+                                    class="d-block w-100" alt="Cancha 3">
                             </div>
                         </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                            data-bs-slide="prev">
                             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                             <span class="visually-hidden">Anterior</span>
                         </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                            data-bs-slide="next">
                             <span class="carousel-control-next-icon" aria-hidden="true"></span>
                             <span class="visually-hidden">Siguiente</span>
                         </button>
@@ -125,172 +137,152 @@
 
 
 
-        <section class="grid-container">
-            <!-- Cancha 1 -->
-            <div class="cancha">
-            <h2>Cancha 1 - Parque Norte</h2>
-            <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6572.634471042497!2d-58.440998978388805!3d-34.545522392350435!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb44eb411878f%3A0x67914849bf65a96e!2sParque%20Norte!5e0!3m2!1ses-419!2sus!4v1750043158665!5m2!1ses-419!2sus" 
-                width="100%" 
-                height="200" 
-                style="border:0;" 
-                allowfullscreen="" 
-                loading="lazy">
-            </iframe>
-            <select>
-                <option disabled selected>Seleccionar día</option>
-                <option>Lunes</option>
-                <option>Martes</option>
-                <option>Miércoles</option>
-                <option>Jueves</option>
-                <option>Sábado</option>
-            </select>
-            <select>
-                <option disabled selected>Seleccionar horario</option>
-                <option>18:00</option>
-                <option>19:00</option>
-                <option>20:00</option>
-                <option>21:00</option>
-                <option>22:00</option>
-            </select>
-            <button>Reservar</button>
-            </div>
+            <section class="grid-container">
+                <!-- Cancha 1 -->
+                <div class="cancha">
+                    <h2>Cancha 1 - Parque Norte</h2>
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6572.634471042497!2d-58.440998978388805!3d-34.545522392350435!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb44eb411878f%3A0x67914849bf65a96e!2sParque%20Norte!5e0!3m2!1ses-419!2sus!4v1750043158665!5m2!1ses-419!2sus"
+                        width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy">
+                    </iframe>
+                    <select>
+                        <option disabled selected>Seleccionar día</option>
+                        <option>Lunes</option>
+                        <option>Martes</option>
+                        <option>Miércoles</option>
+                        <option>Jueves</option>
+                        <option>Sábado</option>
+                    </select>
+                    <select>
+                        <option disabled selected>Seleccionar horario</option>
+                        <option>18:00</option>
+                        <option>19:00</option>
+                        <option>20:00</option>
+                        <option>21:00</option>
+                        <option>22:00</option>
+                    </select>
+                    <button>Reservar</button>
+                </div>
 
-            <!-- Cancha 2 -->
-            <div class="cancha">
-            <h2>Cancha 2 - Club Ciudad</h2>
-            <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6572.8748649534455!2d-58.46224572316819!3d-34.54247835426853!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb4218e04a89b%3A0x1bc88591e0f80452!2sClub%20Ciudad%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sus!4v1750043299538!5m2!1ses-419!2sus" 
-                width="100%" 
-                height="200" 
-                style="border:0;" 
-                allowfullscreen="" 
-                loading="lazy">
-            </iframe>
-            <select>
-                <option disabled selected>Seleccionar día</option>
-                <option>Jueves</option>
-                <option>Viernes</option>
-            </select>
-            <select>
-                <option disabled selected>Seleccionar horario</option>
-                <option>17:00</option>
-                <option>18:30</option>
-            </select>
-            <button>Reservar</button>
-            </div>
+                <!-- Cancha 2 -->
+                <div class="cancha">
+                    <h2>Cancha 2 - Club Ciudad</h2>
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6572.8748649534455!2d-58.46224572316819!3d-34.54247835426853!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb4218e04a89b%3A0x1bc88591e0f80452!2sClub%20Ciudad%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sus!4v1750043299538!5m2!1ses-419!2sus"
+                        width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy">
+                    </iframe>
+                    <select>
+                        <option disabled selected>Seleccionar día</option>
+                        <option>Jueves</option>
+                        <option>Viernes</option>
+                    </select>
+                    <select>
+                        <option disabled selected>Seleccionar horario</option>
+                        <option>17:00</option>
+                        <option>18:30</option>
+                    </select>
+                    <button>Reservar</button>
+                </div>
 
-            <!-- Cancha 3 -->
-            <div class="cancha">
-            <h2>Cancha 3 - Club Temperley</h2>
-            <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26220.340690767593!2d-58.39257322562438!3d-34.76711361110352!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcd2e204770acd%3A0x5c1ad54d40e5c100!2sClub%20Atletico%20Temperley!5e0!3m2!1ses-419!2sus!4v1750043429312!5m2!1ses-419!2sus" 
-                width="100%" 
-                height="200" 
-                style="border:0;" 
-                allowfullscreen="" 
-                loading="lazy">
-            </iframe>
-            <select>
-                <option disabled selected>Seleccionar día</option>
-                <option>Miércoles</option>
-                <option>Domingo</option>
-            </select>
-            <select>
-                <option disabled selected>Seleccionar horario</option>
-                <option>19:00</option>
-                <option>21:00</option>
-            </select>
-            <button>Reservar</button>
-            </div>
+                <!-- Cancha 3 -->
+                <div class="cancha">
+                    <h2>Cancha 3 - Club Temperley</h2>
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26220.340690767593!2d-58.39257322562438!3d-34.76711361110352!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcd2e204770acd%3A0x5c1ad54d40e5c100!2sClub%20Atletico%20Temperley!5e0!3m2!1ses-419!2sus!4v1750043429312!5m2!1ses-419!2sus"
+                        width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy">
+                    </iframe>
+                    <select>
+                        <option disabled selected>Seleccionar día</option>
+                        <option>Miércoles</option>
+                        <option>Domingo</option>
+                    </select>
+                    <select>
+                        <option disabled selected>Seleccionar horario</option>
+                        <option>19:00</option>
+                        <option>21:00</option>
+                    </select>
+                    <button>Reservar</button>
+                </div>
 
-            <!-- Cancha 4 -->
-            <div class="cancha">
-            <h2>Cancha 4 - Wilde Sporting</h2>
-            <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3280.144177587115!2d-58.320585223162496!3d-34.70154326267306!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a33266fa982785%3A0x62a078ba1bad10fc!2sWilde%20Sporting%20Club!5e0!3m2!1ses-419!2sus!4v1750043557673!5m2!1ses-419!2sus" 
-                width="100%" 
-                height="200" 
-                style="border:0;" 
-                allowfullscreen="" 
-                loading="lazy">
-            </iframe>
-            <select>
-                <option disabled selected>Seleccionar día</option>
-                <option>Sábado</option>
-                <option>Domingo</option>
-            </select>
-            <select>
-                <option disabled selected>Seleccionar horario</option>
-                <option>10:00</option>
-                <option>11:30</option>
-            </select>
-            <button>Reservar</button>
-            </div>
-             <!-- Cancha 5 -->
-            <div class="cancha">
-            <h2>Cancha 5 - UTN Fra</h2>
-            <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6560.869458258297!2d-58.331221109220756!3d-34.694213492454814!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a332f63ef0e5fb%3A0x357547a6a31ca7e8!2sUTN%20FRA%20-%20Ingenier%C3%ADa%20Tecnol%C3%B3gica!5e0!3m2!1ses-419!2sus!4v1750043622884!5m2!1ses-419!2sus" 
-                width="100%" 
-                height="200" 
-                style="border:0;" 
-                allowfullscreen="" 
-                loading="lazy">
-            </iframe>
-            <select>
-                <option disabled selected>Seleccionar día</option>
-                <option>Sábado</option>
-                <option>Domingo</option>
-            </select>
-            <select>
-                <option disabled selected>Seleccionar horario</option>
-                <option>10:00</option>
-                <option>11:30</option>
-            </select>
-            <button>Reservar</button>
-            </div>
-        </section>
-           
-          <!-- Formulario anotar la cancha-->
-  <div class="mb-4">
-    <h4>Queres sumar tu cancha? Dejanos tus datos.</h4>
-     <form class="formulario">
-    
-            <div class="form-group">
-                <label for="nombre_c">Nombre de la cancha:</label>
-                <input type="text" id="nombre_c" name="nombre_c" required />
-            </div>
+                <!-- Cancha 4 -->
+                <div class="cancha">
+                    <h2>Cancha 4 - Wilde Sporting</h2>
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3280.144177587115!2d-58.320585223162496!3d-34.70154326267306!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a33266fa982785%3A0x62a078ba1bad10fc!2sWilde%20Sporting%20Club!5e0!3m2!1ses-419!2sus!4v1750043557673!5m2!1ses-419!2sus"
+                        width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy">
+                    </iframe>
+                    <select>
+                        <option disabled selected>Seleccionar día</option>
+                        <option>Sábado</option>
+                        <option>Domingo</option>
+                    </select>
+                    <select>
+                        <option disabled selected>Seleccionar horario</option>
+                        <option>10:00</option>
+                        <option>11:30</option>
+                    </select>
+                    <button>Reservar</button>
+                </div>
+                <!-- Cancha 5 -->
+                <div class="cancha">
+                    <h2>Cancha 5 - UTN Fra</h2>
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6560.869458258297!2d-58.331221109220756!3d-34.694213492454814!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a332f63ef0e5fb%3A0x357547a6a31ca7e8!2sUTN%20FRA%20-%20Ingenier%C3%ADa%20Tecnol%C3%B3gica!5e0!3m2!1ses-419!2sus!4v1750043622884!5m2!1ses-419!2sus"
+                        width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy">
+                    </iframe>
+                    <select>
+                        <option disabled selected>Seleccionar día</option>
+                        <option>Sábado</option>
+                        <option>Domingo</option>
+                    </select>
+                    <select>
+                        <option disabled selected>Seleccionar horario</option>
+                        <option>10:00</option>
+                        <option>11:30</option>
+                    </select>
+                    <button>Reservar</button>
+                </div>
+            </section>
 
-            <div class="form-group">
-                <label for="adress">Dirección:</label>
-                <input type="text" id="adress" name="adress" required />
-            </div>
+            <!-- Formulario anotar la cancha-->
+            <div class="mb-4">
+                <h4>Queres sumar tu cancha? Dejanos tus datos.</h4>
+                <form class="formulario">
 
-            <div class="form-group">
-                <label for="email_c">Email contacto:</label>
-                <input type="email_c" id="email_c" name="email_c" required />
-            </div>
+                    <div class="form-group">
+                        <label for="nombre_c">Nombre de la cancha:</label>
+                        <input type="text" id="nombre_c" name="nombre_c" required />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="adress">Dirección:</label>
+                        <input type="text" id="adress" name="adress" required />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email_c">Email contacto:</label>
+                        <input type="email_c" id="email_c" name="email_c" required />
+                    </div>
 
 
-            <button type="submit">Sumar mi establecimiento</button>
-        </form>
-  </div>
+                    <button type="submit">Sumar mi establecimiento</button>
+                </form>
+            </div>
 
 
 
     </main>
 
     <!-- ===== FOOTER ===== -->
- <footer class="new-content p">
-     <p>&copy; 2025 BasketMania. Todos los derechos reservados.</p>
-        <p> Seguinos en las redes sociales 
+    <footer class="new-content p">
+        <p>&copy; 2025 BasketMania. Todos los derechos reservados.</p>
+        <p> Seguinos en las redes sociales
             <a href="https://instagram/6emiliano">Instagram</a>
             <a href="https://www.linkedin.com/in/emiliano6/">LinkedIn</a>
         </p>
-        
+
     </footer>
-    
+
 </body>
 
 

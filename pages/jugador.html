@@ -1,309 +1,283 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jugador - Basketmania</title>
-    
-    <!-- Bootstrap CSS -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
-    
-    <!-- Font Awesome para iconos -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-    
-    <!-- CSS personalizado -->
-    <link rel="stylesheet" href="../css/estilo.css">
-        <!-- scrip -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jugador - Basketmania</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Font Awesome para iconos -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+
+  <!-- CSS personalizado -->
+  <link rel="stylesheet" href="../css/estilo.css">
+  <!-- scrip -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </head>
+
 <body>
+  <header>
     <!-- ===== NAVBAR PRINCIPAL ===== -->
     <nav class="navbar-container">
-        <div class="nav-content">
-            <!-- Logo -->
-            <a href="../index.html" class="logo-link">
-                <div class="logo-container">
-                    <!-- SVG del logo de básquet con alas -->
-                  <img src="../img/logo.png" alt="Logo Basketball" class="logo-container">
-                </div>
+      <div class="nav-content">
+        <!-- Logo -->
+        <a href="../index.html" class="logo-link">
+          <div class="logo-container">
+            <!-- SVG del logo de básquet con alas -->
+            <img src="../img/logo.png" alt="Logo Basketball" class="logo-container">
+          </div>
+        </a>
+
+        <!-- Checkbox oculto para controlar el menú mobile -->
+        <input type="checkbox" id="menu-toggle" class="menu-toggle">
+
+        <!-- Botón hamburguesa (label que controla el checkbox) -->
+        <label for="menu-toggle" class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+
+        <!-- Menu de navegación -->
+        <ul class="nav-menu">
+          <!-- Link a Index/Inicio -->
+          <li class="nav-item">
+            <a class="nav-link" href="../index.html">
+              <i class="fas fa-home"></i>Inicio
             </a>
+          </li>
 
-            <!-- Checkbox oculto para controlar el menú mobile -->
-            <input type="checkbox" id="menu-toggle" class="menu-toggle">
-            
-            <!-- Botón hamburguesa (label que controla el checkbox) -->
-            <label for="menu-toggle" class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </label>
+          <!-- Link a Canchas -->
+          <li class="nav-item">
+            <a class="nav-link" href="cancha.html">
+              <i class="fas fa-map-marker-alt"></i>Canchas
+            </a>
+          </li>
 
-            <!-- Menu de navegación -->
-            <ul class="nav-menu">
-                <!-- Link a Index/Inicio -->
-                <li class="nav-item">
-                    <a class="nav-link" href="../index.html">
-                        <i class="fas fa-home"></i>Inicio
-                    </a>
-                </li>
-                
-                <!-- Link a Canchas -->
-                <li class="nav-item">
-                    <a class="nav-link" href="cancha.html">
-                        <i class="fas fa-map-marker-alt"></i>Canchas
-                    </a>
-                </li>
-                
-                <!-- Link a Jugadores -->
-                <li class="nav-item">
-                    <a class="nav-link active" href="jugador.html">
-                        <i class="fas fa-users"></i>Jugadores
-                    </a>
-                </li>
-                
-                <!-- Link a Comunidad -->
-                <li class="nav-item">
-                    <a class="nav-link" href="comunidad.html">
-                        <i class="fas fa-comments"></i>Comunidad
-                    </a>
-                </li>
-                
-                <!-- Link a Sobre Nosotros -->
-                <li class="nav-item">
-                    <a class="nav-link" href="nosotros.html">
-                        <i class="fas fa-info-circle"></i>Sobre Nosotros
-                    </a>
-                </li>
-            </ul>
-        </div>
+          <!-- Link a Jugadores -->
+          <li class="nav-item">
+            <a class="nav-link active" href="jugador.html">
+              <i class="fas fa-users"></i>Jugadores
+            </a>
+          </li>
+
+          <!-- Link a Comunidad -->
+          <li class="nav-item">
+            <a class="nav-link" href="comunidad.html">
+              <i class="fas fa-comments"></i>Comunidad
+            </a>
+          </li>
+
+          <!-- Link a Sobre Nosotros -->
+          <li class="nav-item">
+            <a class="nav-link" href="nosotros.html">
+              <i class="fas fa-info-circle"></i>Sobre Nosotros
+            </a>
+          </li>
+        </ul>
+      </div>
     </nav>
+  </header>
+  <!-- ===== CONTENIDO PRINCIPAL ===== -->
 
-    <!-- ===== CONTENIDO PRINCIPAL ===== -->
-    
-    <main>
-        <!-- Sección -->
-        <div class="seccion-jugadores container">
-            <h2 class="mb-4">Para jugadores</h2>
+  <main>
+    <!-- Sección -->
+    <div class="seccion-jugadores container">
+      <h2 class="mb-4">Para jugadores</h2>
 
-            <!-- Descripción y imagen -->
-            <div class="descripcion mb-5">
-                <div class="descripcion-texto">
-                    <p>¿Te falta gente para jugar? Este espacio te permite ver partidos con vacantes disponibles y anotarte fácilmente.</p>
-                </div>
-                <div>
-                    <img src="https://fadeawayworld.net/.image/t_share/MjA5ODYwNjE2MzE4MzYzMzA1/462554357_561466902941611_6083843919299056737_n.jpg" alt="phila" class="img-phila">
-                </div>
+      <!-- Descripción y imagen -->
+      <div class="descripcion mb-5">
+        <div class="descripcion-texto">
+          <p>¿Te falta gente para jugar? Este espacio te permite ver partidos con vacantes disponibles y anotarte
+            fácilmente.</p>
+        </div>
+        <div>
+          <img
+            src="https://fadeawayworld.net/.image/t_share/MjA5ODYwNjE2MzE4MzYzMzA1/462554357_561466902941611_6083843919299056737_n.jpg"
+            alt="phila" class="img-phila">
+        </div>
+      </div>
+
+      <!-- Grid de partidos -->
+
+      <div class="container my-5">
+        <h2 class="mb-4">Partidos disponibles</h2>
+        <div class="row g-4">
+
+          <!-- Partido 1 -->
+          <div class="col-md-3">
+            <div class="partido-card">
+              <h5>Cancha: Parque Norte</h5>
+              <p>Día: Martes 2/6<br>Hora: 19:30 hs</p>
+              <p>Faltan: 4 / 14 jugadores</p>
+              <div class="mapa-container">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6572.634471042497!2d-58.440998978388805!3d-34.545522392350435!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb44eb411878f%3A0x67914849bf65a96e!2sParque%20Norte!5e0!3m2!1ses-419!2sus!4v1750043158665!5m2!1ses-419!2sus"
+                  width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+              </div>
             </div>
+          </div>
 
-                <!-- Grid de partidos -->
+          <!-- Partido 2 -->
+          <div class="col-md-3">
+            <div class="partido-card">
+              <h5>Cancha: Club Ciudad</h5>
+              <p>Día: Miércoles 4/7 <br>Hora: 21:00 hs</p>
+              <p>Faltan: 7 / 14 jugadores</p>
+              <div class="mapa-container">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6572.8748649534455!2d-58.46224572316819!3d-34.54247835426853!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb4218e04a89b%3A0x1bc88591e0f80452!2sClub%20Ciudad%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sus!4v1750043299538!5m2!1ses-419!2sus"
+                  width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+              </div>
+            </div>
+          </div>
 
-<div class="container my-5">
-  <h2 class="mb-4">Partidos disponibles</h2>
-  <div class="row g-4">
-    
-    <!-- Partido 1 -->
-    <div class="col-md-3">
-      <div class="partido-card">
-        <h5>Cancha: Parque Norte</h5>
-        <p>Día: Martes 2/6<br>Hora: 19:30 hs</p>
-        <p>Faltan: 4 / 14 jugadores</p>
-        <div class="mapa-container">
-          <iframe 
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6572.634471042497!2d-58.440998978388805!3d-34.545522392350435!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb44eb411878f%3A0x67914849bf65a96e!2sParque%20Norte!5e0!3m2!1ses-419!2sus!4v1750043158665!5m2!1ses-419!2sus" 
-            width="100%" 
-            height="200" 
-            style="border:0;" 
-            allowfullscreen="" 
-            loading="lazy" 
-            referrerpolicy="no-referrer-when-downgrade">
-          </iframe>
+          <!-- Partido 3 -->
+          <div class="col-md-3">
+            <div class="partido-card">
+              <h5>Cancha: Club Temperley</h5>
+              <p>Día: Jueves 8/7 <br>Hora: 21:30 hs</p>
+              <p>Faltan: 10 / 14 jugadores</p>
+              <div class="mapa-container">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26220.340690767593!2d-58.39257322562438!3d-34.76711361110352!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcd2e204770acd%3A0x5c1ad54d40e5c100!2sClub%20Atletico%20Temperley!5e0!3m2!1ses-419!2sus!4v1750043429312!5m2!1ses-419!2sus"
+                  width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+              </div>
+            </div>
+          </div>
+
+          <!-- Partido 4 -->
+          <div class="col-md-3">
+            <div class="partido-card">
+              <h5>Cancha: Wilde Sporting</h5>
+              <p>Día: Sábado 8/7 <br>Hora: 19:00 hs</p>
+              <p>Faltan: 12 / 14 jugadores</p>
+              <div class="mapa-container">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3280.144177587115!2d-58.320585223162496!3d-34.70154326267306!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a33266fa982785%3A0x62a078ba1bad10fc!2sWilde%20Sporting%20Club!5e0!3m2!1ses-419!2sus!4v1750043557673!5m2!1ses-419!2sus"
+                  width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+              </div>
+            </div>
+          </div>
+
+          <!-- Partido 5 -->
+          <div class="col-md-3">
+            <div class="partido-card">
+              <h5>Cancha: UTN FRA</h5>
+              <p>Día: Sabádo 8/8 <br>Hora: 14:30 hs</p>
+              <p>Faltan: 1 / 14 jugadores</p>
+              <div class="mapa-container">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6560.869458258297!2d-58.331221109220756!3d-34.694213492454814!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a332f63ef0e5fb%3A0x357547a6a31ca7e8!2sUTN%20FRA%20-%20Ingenier%C3%ADa%20Tecnol%C3%B3gica!5e0!3m2!1ses-419!2sus!4v1750043622884!5m2!1ses-419!2sus"
+                  width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+              </div>
+            </div>
+          </div>
+
+          <!-- Partido 6 -->
+          <div class="col-md-3">
+            <div class="partido-card">
+              <h5>Cancha: UTN FRA</h5>
+              <p>Día: Miércoles 6/6 <br>Hora: 21:00 hs</p>
+              <p>Faltan: 4 / 14 jugadores</p>
+              <div class="mapa-container">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6560.869458258297!2d-58.331221109220756!3d-34.694213492454814!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a332f63ef0e5fb%3A0x357547a6a31ca7e8!2sUTN%20FRA%20-%20Ingenier%C3%ADa%20Tecnol%C3%B3gica!5e0!3m2!1ses-419!2sus!4v1750043622884!5m2!1ses-419!2sus"
+                  width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+              </div>
+            </div>
+          </div>
+
+          <!-- Partido 7 -->
+          <div class="col-md-3">
+            <div class="partido-card">
+              <h5>Cancha: Wilde Sporting</h5>
+              <p>Día: Viernes 7/7<br>Hora: 21:00 hs</p>
+              <p>Faltan: 7 / 14 jugadores</p>
+              <div class="mapa-container">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3280.144177587115!2d-58.320585223162496!3d-34.70154326267306!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a33266fa982785%3A0x62a078ba1bad10fc!2sWilde%20Sporting%20Club!5e0!3m2!1ses-419!2sus!4v1750043557673!5m2!1ses-419!2sus"
+                  width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+              </div>
+            </div>
+          </div>
+
+          <!-- Partido 8 -->
+          <div class="col-md-3">
+            <div class="partido-card">
+              <h5>Cancha: Club Temperley </h5>
+              <p>Día: Domingo 9/9<br>Hora: 21:00 hs</p>
+              <p>Faltan: 3 / 14 jugadores</p>
+              <div class="mapa-container">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26220.340690767593!2d-58.39257322562438!3d-34.76711361110352!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcd2e204770acd%3A0x5c1ad54d40e5c100!2sClub%20Atletico%20Temperley!5e0!3m2!1ses-419!2sus!4v1750043429312!5m2!1ses-419!2sus"
+                  width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+              </div>
+            </div>
+          </div>
+
         </div>
+      </div>
+
+      <!-- Formulario para anotarse -->
+      <div class="mb-4">
+        <h5>Anotate a un partido</h5>
+        <form>
+          <div class="mb-3">
+            <label for="partidoSelect" class="form-label">Seleccioná un partido</label>
+            <select class="form-select" id="partidoSelect">
+              <option selected disabled>Elegí una opción...</option>
+              <option value="1">Parque Norte - Martes 2/6 19:30 hs</option>
+              <option value="2">Club Ciudad - Miércoles 7/9 21:00 hs</option>
+              <option value="3">Temperley - Jueves 8/7 21:30 hs</option>
+              <option value="4">Wilde Sporting - Sábado 8/7 19:00 hs</option>
+              <option value="5">UTN Fra - Sábado 8/8 14:30 hs</option>
+              <option value="6">UTN Fra - Miercoles 6/6 21:00 hs</option>
+              <option value="7">Wilde Sporting - Viernes 7/7 21:00 hs</option>
+              <option value="8">Club Temperley - Domingo 9/9 21:00 hs</option>
+            </select>
+          </div>
+          <button type="submit" class="btn btn-primary">Anotarme</button>
+        </form>
       </div>
     </div>
 
-    <!-- Partido 2 -->
-    <div class="col-md-3">
-      <div class="partido-card">
-        <h5>Cancha: Club Ciudad</h5>
-        <p>Día: Miércoles 4/7 <br>Hora: 21:00 hs</p>
-        <p>Faltan: 7 / 14 jugadores</p>
-        <div class="mapa-container">
-          <iframe 
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6572.8748649534455!2d-58.46224572316819!3d-34.54247835426853!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb4218e04a89b%3A0x1bc88591e0f80452!2sClub%20Ciudad%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sus!4v1750043299538!5m2!1ses-419!2sus" 
-            width="100%" 
-            height="200" 
-            style="border:0;" 
-            allowfullscreen="" 
-            loading="lazy" 
-            referrerpolicy="no-referrer-when-downgrade">
-          </iframe>
-        </div>
-      </div>
-    </div>
-
-    <!-- Partido 3 -->
-    <div class="col-md-3">
-      <div class="partido-card">
-        <h5>Cancha: Club Temperley</h5>
-        <p>Día: Jueves 8/7 <br>Hora: 21:30 hs</p>
-        <p>Faltan: 10 / 14 jugadores</p>
-        <div class="mapa-container">
-          <iframe 
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26220.340690767593!2d-58.39257322562438!3d-34.76711361110352!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcd2e204770acd%3A0x5c1ad54d40e5c100!2sClub%20Atletico%20Temperley!5e0!3m2!1ses-419!2sus!4v1750043429312!5m2!1ses-419!2sus" 
-            width="100%" 
-            height="200" 
-            style="border:0;" 
-            allowfullscreen="" 
-            loading="lazy" 
-            referrerpolicy="no-referrer-when-downgrade">
-          </iframe>
-        </div>
-      </div>
-    </div>
-    
-        <!-- Partido 4 -->
-    <div class="col-md-3">
-      <div class="partido-card">
-        <h5>Cancha: Wilde Sporting</h5>
-        <p>Día: Sábado 8/7 <br>Hora: 19:00 hs</p>
-        <p>Faltan: 12 / 14 jugadores</p>
-        <div class="mapa-container">
-          <iframe 
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3280.144177587115!2d-58.320585223162496!3d-34.70154326267306!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a33266fa982785%3A0x62a078ba1bad10fc!2sWilde%20Sporting%20Club!5e0!3m2!1ses-419!2sus!4v1750043557673!5m2!1ses-419!2sus" 
-            width="100%" 
-            height="200" 
-            style="border:0;" 
-            allowfullscreen="" 
-            loading="lazy" 
-            referrerpolicy="no-referrer-when-downgrade">
-          </iframe>
-        </div>
-      </div>
-    </div>
-
-        <!-- Partido 5 -->
-    <div class="col-md-3">
-      <div class="partido-card">
-        <h5>Cancha: UTN FRA</h5>
-        <p>Día: Sabádo 8/8 <br>Hora: 14:30 hs</p>
-        <p>Faltan: 1 / 14 jugadores</p>
-        <div class="mapa-container">
-          <iframe 
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6560.869458258297!2d-58.331221109220756!3d-34.694213492454814!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a332f63ef0e5fb%3A0x357547a6a31ca7e8!2sUTN%20FRA%20-%20Ingenier%C3%ADa%20Tecnol%C3%B3gica!5e0!3m2!1ses-419!2sus!4v1750043622884!5m2!1ses-419!2sus" 
-            width="100%" 
-            height="200" 
-            style="border:0;" 
-            allowfullscreen="" 
-            loading="lazy" 
-            referrerpolicy="no-referrer-when-downgrade">
-          </iframe>
-        </div>
-      </div>
-    </div>
-
-        <!-- Partido 6 -->
-    <div class="col-md-3">
-      <div class="partido-card">
-        <h5>Cancha: UTN FRA</h5>
-        <p>Día: Miércoles 6/6 <br>Hora: 21:00 hs</p>
-        <p>Faltan: 4 / 14 jugadores</p>
-        <div class="mapa-container">
-          <iframe 
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6560.869458258297!2d-58.331221109220756!3d-34.694213492454814!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a332f63ef0e5fb%3A0x357547a6a31ca7e8!2sUTN%20FRA%20-%20Ingenier%C3%ADa%20Tecnol%C3%B3gica!5e0!3m2!1ses-419!2sus!4v1750043622884!5m2!1ses-419!2sus" 
-            width="100%" 
-            height="200" 
-            style="border:0;" 
-            allowfullscreen="" 
-            loading="lazy" 
-            referrerpolicy="no-referrer-when-downgrade">
-          </iframe>
-        </div>
-      </div>
-    </div>
-
-        <!-- Partido 7 -->
-    <div class="col-md-3">
-      <div class="partido-card">
-        <h5>Cancha: Wilde Sporting</h5>
-        <p>Día: Viernes 7/7<br>Hora: 21:00 hs</p>
-        <p>Faltan: 7 / 14 jugadores</p>
-        <div class="mapa-container">
-          <iframe 
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3280.144177587115!2d-58.320585223162496!3d-34.70154326267306!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a33266fa982785%3A0x62a078ba1bad10fc!2sWilde%20Sporting%20Club!5e0!3m2!1ses-419!2sus!4v1750043557673!5m2!1ses-419!2sus" 
-            width="100%" 
-            height="200" 
-            style="border:0;" 
-            allowfullscreen="" 
-            loading="lazy" 
-            referrerpolicy="no-referrer-when-downgrade">
-          </iframe>
-        </div>
-      </div>
-    </div>
-
-        <!-- Partido 8 -->
-    <div class="col-md-3">
-      <div class="partido-card">
-        <h5>Cancha: Club Temperley </h5>
-        <p>Día: Domingo 9/9<br>Hora: 21:00 hs</p>
-        <p>Faltan: 3 / 14 jugadores</p>
-        <div class="mapa-container">
-          <iframe 
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26220.340690767593!2d-58.39257322562438!3d-34.76711361110352!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcd2e204770acd%3A0x5c1ad54d40e5c100!2sClub%20Atletico%20Temperley!5e0!3m2!1ses-419!2sus!4v1750043429312!5m2!1ses-419!2sus" 
-            width="100%" 
-            height="200" 
-            style="border:0;" 
-            allowfullscreen="" 
-            loading="lazy" 
-            referrerpolicy="no-referrer-when-downgrade">
-          </iframe>
-        </div>
-      </div>
-    </div>
-
-  </div>
-</div>
-
-  <!-- Formulario para anotarse -->
-  <div class="mb-4">
-    <h5>Anotate a un partido</h5>
-    <form>
-      <div class="mb-3">
-        <label for="partidoSelect" class="form-label">Seleccioná un partido</label>
-        <select class="form-select" id="partidoSelect">
-          <option selected disabled>Elegí una opción...</option>
-          <option value="1">Parque Norte - Martes 2/6 19:30 hs</option>
-          <option value="2">Club Ciudad - Miércoles 7/9 21:00 hs</option>
-          <option value="3">Temperley - Jueves 8/7 21:30 hs</option>
-          <option value="4">Wilde Sporting - Sábado 8/7 19:00 hs</option>
-          <option value="5">UTN Fra - Sábado 8/8 14:30 hs</option>
-          <option value="6">UTN Fra - Miercoles 6/6 21:00 hs</option>
-          <option value="7">Wilde Sporting - Viernes 7/7 21:00 hs</option>
-          <option value="8">Club Temperley - Domingo 9/9 21:00 hs</option>
-        </select>
-      </div>
-      <button type="submit" class="btn btn-primary">Anotarme</button>
-    </form>
-  </div>
-</div>
 
 
+    <!-- Sonido al anotarse -->
+    <audio id="anotarSound" src="../video/basketball-285178.mp3" preload="auto" controls autoplay></audio>
 
-<!-- Sonido al anotarse -->
-<audio id="anotarSound" src="../video/basketball-285178.mp3" preload="auto" controls autoplay ></audio>
+  </main>
 
-   </main>
+  <!-- ===== FOOTER ===== -->
+  <footer class="new-content p">
+    <p>&copy; 2025 BasketMania. Todos los derechos reservados.</p>
+    <p> Seguinos en las redes sociales
+      <a href="https://instagram/6emiliano">Instagram</a>
+      <a href="https://www.linkedin.com/in/emiliano6/">LinkedIn</a>
+    </p>
 
-    <!-- ===== FOOTER ===== -->
- <footer class="new-content p">
-     <p>&copy; 2025 BasketMania. Todos los derechos reservados.</p>
-        <p> Seguinos en las redes sociales 
-            <a href="https://instagram/6emiliano">Instagram</a>
-            <a href="https://www.linkedin.com/in/emiliano6/">LinkedIn</a>
-        </p>
-        
-    </footer>
-    
+  </footer>
+
 </body>
 
 
