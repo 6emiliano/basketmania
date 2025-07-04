@@ -1,0 +1,549 @@
+@import 'variables';
+
+// Utilidad base para tarjetas (cards)
+%card-base {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: $secondary-color;
+  line-height: 1.6;
+}
+
+/* ===== NAVBAR ===== */
+.navbar-container {
+  background-color: $white;
+  box-shadow: 0 2px 15px $shadow-light;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  padding: 1rem 0;
+  animation: slideDown 0.5s ease-out;
+
+  .nav-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.logo-container {
+  height: 50px;
+  width: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+  border-radius: 50%;
+  background: linear-gradient(135deg, $primary-color 0%, #333 100%);
+  padding: 5px;
+
+  &:hover {
+    transform: scale(1.05) rotate(5deg);
+    box-shadow: 0 5px 15px $shadow-medium;
+  }
+
+  .logo-svg {
+    height: 100%;
+    width: 100%;
+    fill: $white;
+    transition: fill 0.3s ease;
+  }
+}
+
+// ===== NAVIGATION MENU (DESKTOP) =====
+.nav-menu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+
+  .nav-item {
+    margin: 0 0.25rem;
+
+    .nav-link {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      color: $text-color;
+      font-weight: 500;
+      font-size: 16px;
+      padding: 0.75rem 1.25rem;
+      border-radius: 25px;
+      transition: all 0.3s ease;
+      position: relative;
+
+      &:hover {
+        background-color: $hover-color;
+        color: $accent-color;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(255, 107, 53, 0.2);
+      }
+
+      &.active {
+        background: linear-gradient(135deg, $accent-color 0%, #ff8a65 100%);
+        color: $white;
+        box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
+
+        &:hover {
+          transform: translateY(-2px) scale(1.02);
+          box-shadow: 0 6px 20px rgba(255, 107, 53, 0.4);
+        }
+      }
+
+      i {
+        font-size: 14px;
+        margin-right: 0.5rem;
+        transition: transform 0.3s ease;
+      }
+
+      &:hover i {
+        transform: scale(1.1);
+      }
+    }
+  }
+}
+
+// ===== MENU HAMBURGUESA (SOLO CSS) =====
+.menu-toggle {
+  display: none;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  background: transparent;
+  border: none;
+
+  &:hover {
+    background-color: $hover-color;
+  }
+
+  span {
+    width: 25px;
+    height: 3px;
+    background-color: $text-color;
+    margin: 3px 0;
+    transition: all 0.3s ease;
+    border-radius: 2px;
+    transform-origin: center;
+  }
+}
+
+// Animación del hamburger cuando está activo
+.menu-toggle:checked + .hamburger {
+  span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+  span:nth-child(2) {
+    opacity: 0;
+  }
+  span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -6px);
+  }
+}
+
+// ===== RESPONSIVE DESIGN =====
+@media screen and (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-menu {
+    position: fixed;
+    top: 82px;
+    left: -100%;
+    width: 100%;
+    height: calc(100vh - 82px);
+    background-color: $white;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    transition: left 0.3s ease;
+    box-shadow: 0 4px 20px $shadow-medium;
+    padding: 2rem 0;
+    overflow-y: auto;
+
+    .nav-item {
+      margin: 0.75rem 0;
+      width: 80%;
+
+      .nav-link {
+        width: 100%;
+        text-align: center;
+        font-size: 18px;
+        padding: 1rem 1.5rem;
+        border-radius: 15px;
+        justify-content: center;
+      }
+    }
+  }
+
+  .logo-container {
+    height: 45px;
+    width: 45px;
+  }
+
+  .nav-content {
+    padding: 0 1.5rem;
+  }
+
+  .menu-toggle:checked ~ .nav-menu {
+    left: 0;
+
+    &::before {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: -1;
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .navbar-container {
+    padding: 0.75rem 0;
+  }
+
+  .logo-container {
+    height: 40px;
+    width: 40px;
+  }
+
+  .nav-content {
+    padding: 0 1rem;
+  }
+
+  .nav-link {
+    font-size: 16px;
+    padding: 0.875rem 1.25rem;
+  }
+
+  .nav-menu {
+    top: 74px;
+    height: calc(100vh - 74px);
+    padding: 1.5rem 0;
+  }
+}
+
+// ===== ANIMACIONES =====
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.nav-item {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.5s ease-out forwards;
+
+  &:nth-child(1) { animation-delay: 0.1s; }
+  &:nth-child(2) { animation-delay: 0.2s; }
+  &:nth-child(3) { animation-delay: 0.3s; }
+  &:nth-child(4) { animation-delay: 0.4s; }
+  &:nth-child(5) { animation-delay: 0.5s; }
+}
+
+@media screen and (min-width: 769px) {
+  .nav-item {
+    opacity: 1;
+    transform: translateY(0);
+    animation: none;
+  }
+}
+
+// ===== CONTENIDO =====
+.new-section {
+  padding: 4rem 0;
+  text-align: center;
+  color: #666;
+  background-image: url('../img/fondo.png');
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .new-content {
+    h1 {
+      color: $primary-color;
+      margin-bottom: 1rem;
+      font-weight: 700;
+    }
+    .lead {
+      font-size: 1.25rem;
+      margin-bottom: 1rem;
+      color: #555;
+    }
+    p {
+      color: #777;
+      font-size: 1rem;
+    }
+  }
+}
+
+// ===== UTILIDADES =====
+.menu-toggle:checked ~ body {
+  overflow: hidden;
+}
+
+.nav-link:focus,
+.hamburger:focus {
+  outline: 2px solid $accent-color;
+  outline-offset: 2px;
+}
+
+@media (hover: hover) {
+  .nav-link:hover {
+    background-color: $hover-color;
+    color: $accent-color;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+@mixin footer-style($padding) {
+    background-color: #807f7f80;
+    padding: $padding;
+    text-align: center;
+    border-top: 2px solid #6e2727;
+    bottom: 0;
+    width: 100%;
+}
+
+footer {
+    @include footer-style(5px);
+}
+
+// ===== SECCIÓN NOSOTROS =====
+.sobre-nosotros {
+  padding: 2rem;
+  background-color: #f9f9f9;
+  text-align: center;
+
+  .intro {
+    max-width: 800px;
+    margin: 0 auto 2rem;
+  }
+
+  .grid-cuadrantes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+
+    .cuadrante {
+      width: 100%;
+      overflow: hidden;
+      border: 2px solid #ccc;
+      border-radius: 12px;
+      padding: 8px;
+      background-color: #fff;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+
+      .media {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 16 / 9;
+        object-fit: cover;
+        border-radius: 8px;
+        display: block;
+      }
+    }
+  }
+
+  .titulo-con-imagen {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    justify-content: center;
+
+    h2 {
+      font-size: 2rem;
+      line-height: 1.2;
+      margin: 0;
+    }
+
+    .img-sobre-nosotros {
+      height: calc(2 * 2rem * 1.2);
+      width: auto;
+    }
+  }
+}
+
+// ===== SECCIÓN COMUNIDAD =====
+.comunidad {
+  padding: 2rem;
+  background-color: #f0f4ff;
+  text-align: center;
+
+  .formulario {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    max-width: 800px;
+    margin: 0 auto;
+    justify-content: space-between;
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      flex: 1 1 45%;
+      min-width: 250px;
+
+      input,
+      select {
+        padding: 0.5rem;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+    }
+
+    fieldset.form-group {
+      border: none;
+      flex: 1 1 100%;
+      text-align: left;
+
+      label {
+        margin-right: 1rem;
+      }
+    }
+  }
+}
+
+button {
+  margin-top: 1rem;
+  padding: 0.75rem 1.5rem;
+  background-color: #cc0000;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #990a00;
+  }
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: #0066cc;
+  box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.2);
+  background-color: #eaf4ff;
+}
+
+.imagen-final {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-top: 2rem;
+  border-radius: 8px;
+}
+
+// ===== SECCIÓN JUGADORES =====
+.seccion-jugadores {
+  padding: 2rem;
+  background-color: $secondary-color;
+
+  .descripcion {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    .descripcion-texto {
+      max-width: 600px;
+    }
+  }
+
+  .partido-card {
+    @extend %card-base;
+    border: 1px solid #dee2e6;
+    border-radius: 10px;
+    padding: 1rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+
+    h5 {
+      font-weight: 600;
+    }
+  }
+
+  .mapa-container iframe {
+    border-radius: 8px;
+    margin-top: 0.5rem;
+  }
+
+  .img-phila {
+    width: 30vw;
+    height: auto;
+    border-radius: 10px;
+  }
+}
+
+// ===== ESTILOS PARA CANCHAS =====
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+
+  .cancha {
+    @extend %card-base;
+    transition: box-shadow 0.3s, transform 0.3s;
+
+    h2 {
+      font-size: 1.2em;
+      margin: 0 0 5px;
+    }
+
+    &:hover {
+      box-shadow: 0 6px 20px rgba(44, 62, 80, 0.15);
+      transform: translateY(-6px) scale(1.03);
+      transition: box-shadow 0.3s, transform 0.3s;
+    }
+  }
+}
+
+
+

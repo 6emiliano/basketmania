@@ -16,6 +16,11 @@
     <link rel="stylesheet" href="../css/estilo.css">
     <!-- scrip -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- libreria style -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
 </head>
 
 <body>
@@ -246,26 +251,30 @@
 
             <!-- Formulario anotar la cancha-->
             <div class="mb-4">
-                <h4>Queres sumar tu cancha? Dejanos tus datos.</h4>
+                <br>
+                <h4>¿Querés sumar tu cancha? Dejanos tus datos.</h4>
                 <form class="formulario">
-
-                    <div class="form-group">
-                        <label for="nombre_c">Nombre de la cancha:</label>
-                        <input type="text" id="nombre_c" name="nombre_c" required />
+                    <div class="form-group mb-3">
+                        <label for="nombre_c" class="form-label">Nombre de la cancha:</label>
+                        <input type="text" id="nombre_c" name="nombre_c" class="form-control" required />
                     </div>
-
-                    <div class="form-group">
-                        <label for="adress">Dirección:</label>
-                        <input type="text" id="adress" name="adress" required />
+                    <div class="form-group mb-3">
+                        <label for="direccion" class="form-label">Dirección:</label>
+                        <input type="text" id="direccion" name="direccion" class="form-control" required />
                     </div>
-
-                    <div class="form-group">
-                        <label for="email_c">Email contacto:</label>
-                        <input type="email_c" id="email_c" name="email_c" required />
+                    <div class="form-group mb-3">
+                        <label for="email_c" class="form-label">Email de contacto:</label>
+                        <input type="email" id="email_c" name="email_c" class="form-control" required />
                     </div>
-
-
-                    <button type="submit">Sumar mi establecimiento</button>
+                    <div class="form-group mb-3">
+                        <label for="telefono" class="form-label">Teléfono:</label>
+                        <input type="tel" id="telefono" name="telefono" class="form-control" />
+                    </div>
+                    <div class="form-group mb-3">
+                        <label for="mensaje" class="form-label">Mensaje adicional:</label>
+                        <textarea id="mensaje" name="mensaje" class="form-control" rows="3"></textarea>
+                    </div>
+                    <button type="submit" >Sumar mi establecimiento</button>
                 </form>
             </div>
 
@@ -277,10 +286,13 @@
     <footer class="new-content p">
         <p>&copy; 2025 BasketMania. Todos los derechos reservados.</p>
         <p> Seguinos en las redes sociales
-            <a href="https://instagram/6emiliano">Instagram</a>
-            <a href="https://www.linkedin.com/in/emiliano6/">LinkedIn</a>
+            <a href="https://instagram/6emiliano" target="_blank" rel="noopener" aria-label="Instagram">
+                <i class="fab fa-instagram" style="font-size: 1.5em; margin-left: 8px; background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/emiliano6/" target="_blank" rel="noopener" aria-label="LinkedIn">
+                <i class="fab fa-linkedin" style="font-size: 1.5em; margin-left: 8px;"></i>
+            </a>
         </p>
-
     </footer>
 
 </body>

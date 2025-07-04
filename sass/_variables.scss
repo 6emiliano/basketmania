@@ -1,0 +1,29 @@
+/* Variables de colores personalizables */
+// ===== VARIABLES =====
+$primary-color: #1a1a1a;
+$secondary-color: #f8f9fa;
+$accent-color: #ff6b35;
+$text-color: #333;
+$hover-color: #e9ecef;
+$white: #ffffff;
+$shadow-light: rgba(0, 0, 0, 0.1);
+$shadow-medium: rgba(0, 0, 0, 0.15);
+
+// ===== CSS VARIABLES FOR JS/HTML ACCESS =====
+:root {
+  --primary-color: #{$primary-color};
+  --secondary-color: #{$secondary-color};
+  --accent-color: #{$accent-color};
+  --text-color: #{$text-color};
+  --hover-color: #{$hover-color};
+  --white: #{$white};
+  --shadow-light: #{$shadow-light};
+  --shadow-medium: #{$shadow-medium};
+}
+
+/* ===== RESET Y CONFIGURACIÓN BASE ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
