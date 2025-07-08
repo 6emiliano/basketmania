@@ -18,23 +18,7 @@
   box-sizing: border-box;
 }
 
-.grid-container .cancha, .seccion-jugadores .partido-card {
-  background-color: #fff;
-  border-radius: 12px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  padding: 15px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-body {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f8f9fa;
-  line-height: 1.6;
-}
-
-/* ===== NAVBAR ===== */
+/* navbar*/
 .navbar-container {
   background-color: #ffffff;
   box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
@@ -279,6 +263,23 @@ body {
     animation: none;
   }
 }
+.grid-container .cancha, .seccion-jugadores .partido-card {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f8f9fa;
+  line-height: 1.6;
+}
+
+/* ===== NAVBAR ===== */
 .new-section {
   padding: 4rem 0;
   text-align: center;
@@ -327,6 +328,7 @@ body {
     transition-duration: 0.01ms !important;
   }
 }
+/*mixins*/
 footer {
   background-color: rgba(128, 127, 127, 0.5019607843);
   padding: 5px;
