@@ -26,11 +26,11 @@
 
 <body>
     <!-- ===== NAVBAR PRINCIPAL ===== -->
-    <header>
-        <nav class="navbar-container">
+    <header role="banner">
+        <nav class="navbar-container" role="navigation" aria-label="Menú principal">
             <div class="nav-content">
                 <!-- Logo -->
-                <a href="index.html" class="logo-link">
+                <a href="index.html" class="logo-link" aria-label="Ir a inicio">
                     <div class="logo-container">
                         <!-- SVG del logo de básquet con alas -->
                         <img src="./img/logo.png" alt="Logo Basketball" class="logo-container">
@@ -38,48 +38,48 @@
                 </a>
 
                 <!-- Checkbox oculto para controlar el menú mobile -->
-                <input type="checkbox" id="menu-toggle" class="menu-toggle">
+                <input type="checkbox" id="menu-toggle" class="menu-toggle" aria-label="Abrir menú de navegación">
 
                 <!-- Botón hamburguesa (label que controla el checkbox) -->
-                <label for="menu-toggle" class="hamburger">
+                <label for="menu-toggle" class="hamburger" aria-controls="nav-menu" aria-expanded="false" aria-label="Menú">
                     <span></span>
                     <span></span>
                     <span></span>
                 </label>
 
                 <!-- Menu de navegación -->
-                <ul class="nav-menu">
+                <ul class="nav-menu" id="nav-menu" role="menubar">
                     <!-- Link a Index/Inicio -->
-                    <li class="nav-item">
-                        <a class="nav-link active" href="./index.html">
+                    <li class="nav-item" role="none">
+                        <a class="nav-link active" href="./index.html" role="menuitem" aria-current="page">
                             <i class="fas fa-home"></i>Inicio
                         </a>
                     </li>
 
                     <!-- Link a Canchas -->
-                    <li class="nav-item">
-                        <a class="nav-link" href="./pages/cancha.html">
+                    <li class="nav-item" role="none">
+                        <a class="nav-link" href="./pages/cancha.html" role="menuitem">
                             <i class="fas fa-map-marker-alt"></i>Canchas
                         </a>
                     </li>
 
                     <!-- Link a Jugadores -->
-                    <li class="nav-item">
-                        <a class="nav-link" href="./pages/jugador.html">
+                    <li class="nav-item" role="none">
+                        <a class="nav-link" href="./pages/jugador.html" role="menuitem">
                             <i class="fas fa-users"></i>Jugadores
                         </a>
                     </li>
 
                     <!-- Link a Comunidad -->
-                    <li class="nav-item">
-                        <a class="nav-link" href="./pages/comunidad.html">
+                    <li class="nav-item" role="none">
+                        <a class="nav-link" href="./pages/comunidad.html" role="menuitem">
                             <i class="fas fa-comments"></i>Comunidad
                         </a>
                     </li>
 
                     <!-- Link a Sobre Nosotros -->
-                    <li class="nav-item">
-                        <a class="nav-link" href="./pages/nosotros.html">
+                    <li class="nav-item" role="none">
+                        <a class="nav-link" href="./pages/nosotros.html" role="menuitem">
                             <i class="fas fa-info-circle"></i>Sobre Nosotros
                         </a>
                     </li>
@@ -89,12 +89,12 @@
     </header>
     <!-- ===== CONTENIDO PRINCIPAL ===== -->
 
-    <main>
+    <main role="main">
         <!-- Sección r -->
-        <section class="new-section">
+        <section class="new-section" aria-labelledby="seccion-principal">
             <div class="container">
                 <div class="new-content">
-                    <h1><i class="fas fa-basketball-ball me-2"></i>BasketMania</h1>
+                    <h1 id="titulo-principal"><i class="fas fa-basketball-ball me-2"></i>BasketMania</h1>
                     <p class="lead">El lugar para los fanaticos del basket</p>
                     <p>Un proyecto creado entre amigos para conectar jugadores y canchas, fomantando la comunidad más
                         linda del deporte.</p>
@@ -104,21 +104,17 @@
     </main>
 
     <!-- ===== FOOTER ===== -->
-    <footer class="new-content p">
+    <footer class="new-content p" role="contentinfo">
         <p>&copy; 2025 BasketMania. Todos los derechos reservados.</p>
         <p> Seguinos en las redes sociales
-            <a href="https://instagram.com/6emiliano" target="_blank" rel="noopener" aria-label="Instagram">
+            <a href="https://instagram.com/6emiliano" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
                 <i class="fab fa-instagram" style="font-size: 1.5em; margin-left: 8px; background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;"></i>
             </a>
-            <a href="https://www.linkedin.com/in/emiliano6/" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <a href="https://www.linkedin.com/in/emiliano6/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
                 <i class="fab fa-linkedin" style="font-size: 1.5em; margin-left: 8px;"></i>
             </a>
         </p>
     </footer>
 
 </body>
-
-
-
-
 </html>
